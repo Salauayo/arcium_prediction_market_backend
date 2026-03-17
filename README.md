@@ -1,9 +1,7 @@
 # Arcium Prediction Market Backend
 
-
-
-![Language: Rust](https://img.shields.io/badge/language-Rust-orange?logo=rust&logoColor=white)
-![Framework: Anchor](https://img.shields.io/badge/framework-Anchor-blue?logo=solana&logoColor=white)
+![Language: Rust](https://img.shields.io/badge/language-Rust-orange?logo=rust\&logoColor=white)
+![Framework: Anchor](https://img.shields.io/badge/framework-Anchor-blue?logo=solana\&logoColor=white)
 ![Status: Ready](https://img.shields.io/badge/status-Ready-brightgreen)
 
 This repository contains the backend implementation of a prediction market built on Solana using Rust and Anchor.
@@ -44,33 +42,71 @@ Cargo.toml → Rust dependencies
 
 ##  Getting Started
 
-### 0. Open terminal and go to project folder
+### 0. Update system packages
 
-```bash
-cd arcium_prediction_market_backend
+```bash id="sysupdate"
+sudo apt update && sudo apt upgrade -y
 ```
 
-### 1. Start local Solana validator
+### 1. Install Solana CLI and test validator
 
-```bash
+```bash id="solinstall"
+sh -c "$(curl -sSfL https://release.solana.com/stable/install)"
+```
+
+Reload terminal after installation:
+
+```bash id="solpath"
+export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"
+```
+
+Check version:
+
+```bash id="solversion"
+solana --version
+```
+
+### 2. Navigate to project folder
+
+```bash id="cdproj"
+cd ~/arcium_prediction_market_backend
+```
+
+### 3. Start local Solana validator
+
+```bash id="validator"
 solana-test-validator
 ```
 
-### 2. Build the program
+> ⚠️Note: `solana-test-validator` is part of Solana CLI. You can also create a local helper script if desired:
+>
+> ```bash
+> #!/bin/bash
+> solana-test-validator
+> ```
+>
+> Save as `solana-test-validator.sh` and make executable:
+>
+> ```bash
+> chmod +x solana-test-validator.sh
+> ./solana-test-validator.sh
+> ```
 
-```bash
+### 4. Build the program
+
+```bash id="anchorbuild"
 anchor build
 ```
 
-### 3. Deploy the program
+### 5. Deploy the program
 
-```bash
+```bash id="anchordeploy"
 anchor deploy
 ```
 
-### 4. Run tests (optional)
+### 6. Run tests (optional)
 
-```bash
+```bash id="anchortest"
 anchor test
 ```
 
