@@ -1,5 +1,11 @@
 # Arcium Prediction Market Backend
 
+
+
+![Language: Rust](https://img.shields.io/badge/language-Rust-orange?logo=rust&logoColor=white)
+![Framework: Anchor](https://img.shields.io/badge/framework-Anchor-blue?logo=solana&logoColor=white)
+![Status: Ready](https://img.shields.io/badge/status-Ready-brightgreen)
+
 This repository contains the backend implementation of a prediction market built on Solana using Rust and Anchor.
 
 It already have a working Solana backend that creates markets and accepts votes.
