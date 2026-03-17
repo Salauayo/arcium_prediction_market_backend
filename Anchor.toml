@@ -1,0 +1,9 @@
+[programs.localnet]
+arcium_prediction_market = "A3AwUM2QyAuSo76RJCtSp8PBxbzSs2Xvaqd8j8w8PXPp"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "cargo test-bpf"
