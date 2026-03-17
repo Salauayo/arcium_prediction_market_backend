@@ -12,7 +12,7 @@ This project implements a decentralized prediction market where users can:
 * Submit votes on existing markets
 * Store all market and voting data on-chain
 
-The backend is built using the Anchor framework, ensuring a structured and scalable Solana program.
+The backend is built using the Anchor framework and Arcium, ensuring **encrypted voting** and structured, scalable Solana programs.
 
 ---
 
@@ -21,6 +21,7 @@ The backend is built using the Anchor framework, ensuring a structured and scala
 *  Market creation with multiple outcomes
 *  On-chain state management
 *  User voting system
+*  Voting is encrypted using Arcium, ensuring privacy of all votes on-chain
 *  Anchor-based architecture (IDL compatible)
 *  Ready for frontend integration
 
@@ -37,7 +38,13 @@ Cargo.toml → Rust dependencies
 
 ##  Getting Started
 
-### 1. Start local validator
+### 0. Open terminal and go to project folder
+
+```bash
+cd arcium_prediction_market_backend
+```
+
+### 1. Start local Solana validator
 
 ```bash
 solana-test-validator
@@ -70,7 +77,7 @@ This backend is designed to be easily integrated with a frontend using the Ancho
 Frontend clients can interact with the program using:
 
 * `createMarket` → to create new prediction markets
-* `vote` → to submit votes
+* `vote` → to submit votes (encrypted by Arcium)
 
 ---
 
@@ -78,7 +85,7 @@ Frontend clients can interact with the program using:
 
 * Built as part of Arcium RTGS
 * Focused on backend logic and on-chain functionality
-* Can be extended with privacy layers (e.g., encrypted voting via Arcium)
+* Voting is encrypted using Arcium, ensuring privacy of all votes on-chain
 
 ---
 
